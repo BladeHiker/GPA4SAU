@@ -1,0 +1,222 @@
+.App {
+    text-align: center;
+
+}
+
+body {
+    background-color: #ecf0f5;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+
+}
+
+.main-con {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-con ol {
+    list-style: none;
+    padding: 0;
+    width: min(95vw, 500px);
+}
+
+.sub-con {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: 5px 5px;
+    -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
+    /* border-radius: 50px; */
+    margin: 8px 0;
+    box-sizing: border-box;
+    max-width: inherit;
+    background-color: white;
+}
+
+.sub-con button {
+    width: 200%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.sub-con button:hover {
+    background: #eee;
+}
+
+.row {
+    display: table-row;
+}
+
+.subInp,
+.grade {
+    border: none;
+    outline: none;
+    margin: 5px;
+    box-sizing: border-box;
+    width: 90%;
+}
+
+
+.grade {
+    text-align: end;
+}
+
+.cell {
+    display: table-cell;
+}
+
+.scoreInp,
+.creditInp {
+    outline: none;
+    margin: 5px;
+    display: table-cell;
+    width: 45%;
+    height: 20px;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+
+.inpTip {
+    position: relative;
+    text-align: end;
+    top: -75%;
+    height: 0;
+    padding-right: 10px;
+    box-sizing: border-box;
+    user-select: none;
+    pointer-events: none;
+    font-size: 8px;
+    color: #555555;
+}
+
+.scoreInp input,
+.creditInp input {
+    display: block;
+    outline: none;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    /*border-radius: 4px;*/
+    -webkit-box-shadow: inset -3px -3px 12px 2px rgba(0, 0, 0, 0.06);
+    box-shadow: inset -3px -3px 12px 2px rgba(0, 0, 0, .06);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.addBtn {
+    margin: 5px 0;
+    outline: none;
+    width: 100%;
+    height: 34px;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+    background-color: #008d4c;
+    background-image: none;
+    border: 1px solid #ccc;
+    /*border-radius: 4px;*/
+    -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
+}
+
+.clearBtn {
+    margin: 5px 0;
+    outline: none;
+    width: 100%;
+    height: 34px;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+    background-color: #dd4b39;
+    background-image: none;
+    border: 1px solid #ccc;
+    /*border-radius: 4px;*/
+    -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
+}
+
+.gpa-con {
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+    box-sizing: border-box;
+    -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
+    font-weight: lighter;
+    font-size: 50px;
+    background-color: white;
+}
+
+.gpa-title {
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    background-color: #000000;
+    color: white;
+    width: 120px;
+}
