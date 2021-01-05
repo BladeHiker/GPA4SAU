@@ -51,13 +51,11 @@ class SubjectItem extends React.Component {
         const Score = this.props.data.Score
         const Grade = this.props.data.Grade
         return (
-            <div>
+            <div className="sub-area">
                 <div className="delBtn">
                     <button onClick={this.itemRemove}>-</button>
                 </div>
                 <div className="sub-con">
-
-
                     <div className="row">
                         <div className="cell">
                             <input className="subInp" placeholder={'科目' + (this.props.index + 1)} type="text"
@@ -106,19 +104,15 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            subList: [{
-                subName: "",
-                Score: null,
-                Credit: null,
-                Grade: null
-            }],
-            salt: 0
+            subList: [],
+            cnt: 0
         }
         this.getList = this.getList.bind(this)
         this.dataChanged = this.dataChanged.bind(this)
         this.itemRemove = this.itemRemove.bind(this)
         this.itemAdd = this.itemAdd.bind(this)
         this.clearList = this.clearList.bind(this)
+        this.itemAdd()
     }
 
     dataChanged(index, data) {
@@ -130,12 +124,8 @@ class App extends React.Component {
     }
 
     itemRemove(index) {
-        this.setState({
-            salt: new Date().getTime()
-        })
         let l = this.state.subList
         l.splice(index, 1)
-        console.log(l)
         this.setState({
             subList: l
         })
@@ -143,7 +133,13 @@ class App extends React.Component {
 
     itemAdd() {
         let l = this.state.subList
+        const i = this.state.cnt + 1;
+        this.setState({
+            cnt: i
+        })
+
         l.push({
+            index: i,
             subName: "",
             Score: null,
             Credit: null,
@@ -156,9 +152,6 @@ class App extends React.Component {
 
     clearList() {
         this.setState({
-            salt: new Date().getTime()
-        })
-        this.setState({
             subList: [{
                 subName: "",
                 Score: null,
@@ -170,7 +163,7 @@ class App extends React.Component {
 
     getList() {
         return this.state.subList.map((s, i) => {
-            return <li><SubjectItem key={this.state.salt + i} index={i} data={s} onDataChanged={this.dataChanged}
+            return <li><SubjectItem key={s.index} index={i} data={s} onDataChanged={this.dataChanged}
                                     itemRemove={this.itemRemove}/></li>
         })
     }
@@ -187,21 +180,26 @@ class App extends React.Component {
     }
 
     render() {
-
         return (
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
-                    SAU绩点计算器
+                    <h1>SAU绩点计算器</h1>
+                    <h2>供沈航师生使用</h2>
+                    <p>By BladeHiker</p>
+
                 </header>
                 <div className="main-con">
                     <ol>
+                        <li>
+                            <p className="container tips">Tips:评级类学科分数填写方法 <hr/>优秀 = 95，良好 = 85，中等 = 75，及格 = 65，不及格 = 0</p>
+                        </li>
                         {this.getList()}
                         <li>
-                            <button className="addBtn" onClick={this.itemAdd}>+</button>
+                            <button className="addBtn addBtnAni" onClick={this.itemAdd}>+</button>
                         </li>
                         <li>
-                            <button className="clearBtn" onClick={this.clearList}>重置</button>
+                            <button className="clearBtn clearBtnAni" onClick={this.clearList}>重置</button>
                         </li>
                         <Gpa gpa={this.calGPA()}/>
                     </ol>

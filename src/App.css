@@ -1,6 +1,9 @@
 .App {
     text-align: center;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
@@ -8,7 +11,7 @@ body {
 }
 
 .App-logo {
-    height: 40vmin;
+    height: 100px;
     pointer-events: none;
 }
 
@@ -18,13 +21,50 @@ body {
     }
 }
 
+.container{
+    width: min(95vw, 500px);
+    background-color: white;
+    -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
+    margin: 0;
+}
+
+.tips{
+    padding: 8px;
+    box-sizing: border-box;
+}
+
 .App-header {
-    height: 180px;
+    width: min(95vw, 500px);
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
+    -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
+    margin-top: 10px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+h1{
+    margin: 0;
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+h2{
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+
+}
+
+.App-header p{
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 
@@ -159,8 +199,9 @@ input[type="number"] {
     color: #fff;
     background-color: #008d4c;
     background-image: none;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     /*border-radius: 4px;*/
+    border: none;
     -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
     box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
 }
@@ -177,8 +218,9 @@ input[type="number"] {
     color: #fff;
     background-color: #dd4b39;
     background-image: none;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     /*border-radius: 4px;*/
+    border: none;
     -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
     box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
 }
@@ -197,7 +239,20 @@ input[type="number"] {
     font-weight: lighter;
     font-size: 50px;
     background-color: white;
+    animation: gpa-in 0.5s ease-in;
 }
+
+@keyframes gpa-in {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
 
 .gpa-title {
     font-size: 15px;
@@ -221,6 +276,7 @@ input[type="number"] {
 }
 
 .delBtn button {
+    border-radius: 0 0 0 6px;
     transform: translateY(50%);
     background: #eee;
     border: none;
@@ -236,4 +292,28 @@ input[type="number"] {
 
 .delBtn button:hover {
     background: #dd4b39;
+}
+
+.sub-area {
+    animation: add-sub 0.3s ease-in;
+    transform-origin: center;
+}
+
+.addBtnAni:active {
+    background-color: #275827;
+}
+
+.clearBtnAni:active {
+    background-color: #ac2925;
+}
+
+@keyframes add-sub {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
