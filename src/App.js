@@ -21,13 +21,13 @@ class SubjectItem extends React.Component {
 
     scoreChanged(event) {
         let p = this.props;
-        p.data.Score = Number.parseInt(event.target.value)
+        p.data.Score = Number.parseFloat(event.target.value)
         this.setGrade(p)
     }
 
     creditChanged(event) {
         let p = this.props;
-        p.data.Credit = Number.parseInt(event.target.value)
+        p.data.Credit = Number.parseFloat(event.target.value)
         this.setGrade(p)
     }
 
@@ -70,13 +70,13 @@ class SubjectItem extends React.Component {
                     </div>
                     <div className="row">
                         <div className="creditInp">
-                            <input placeholder='输入学分' type="number" min='0' max='100' value={Credit}
+                            <input placeholder='输入学分' type="number" step="0.01" min='0' value={Credit}
                                    onChange={this.creditChanged}/>
                             <div className="inpTip">/学分</div>
                         </div>
 
                         <div className="scoreInp">
-                            <input placeholder='输入分数' type="number" min='0' max='100' value={Score}
+                            <input placeholder='输入分数' type="number" step="0.01" min='0' value={Score}
                                    onChange={this.scoreChanged}/>
                             <div className="inpTip">/分</div>
                         </div>
@@ -192,7 +192,8 @@ class App extends React.Component {
                 <div className="main-con">
                     <ol>
                         <li>
-                            <p className="container tips">Tips:评级类学科分数填写方法 <hr/>优秀 = 95，良好 = 85，中等 = 75，及格 = 65，不及格 = 0</p>
+                            <p className="container tips">Tips:评级类学科分数填写方法 <hr/>优秀 = 95，良好 = 85，中等 = 75，及格 = 65，不及格 = 0
+                            </p>
                         </li>
                         {this.getList()}
                         <li>
