@@ -21,7 +21,7 @@ body {
     }
 }
 
-.container{
+.container {
     width: min(95vw, 500px);
     background-color: white;
     -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .075);
@@ -29,9 +29,10 @@ body {
     margin: 0;
 }
 
-.tips{
+.tips {
     padding: 8px;
     box-sizing: border-box;
+    border-top: 4px #d3b126 solid;
 }
 
 .App-header {
@@ -48,20 +49,21 @@ body {
     padding: 10px 0;
     box-sizing: border-box;
 }
-h1{
+
+h1 {
     margin: 0;
     font-size: 50px;
     font-weight: lighter;
 }
 
-h2{
+h2 {
     margin: 0;
     font-size: 20px;
     font-weight: normal;
 
 }
 
-.App-header p{
+.App-header p {
     margin: 0;
     font-size: 16px;
     font-weight: normal;
@@ -115,6 +117,7 @@ input[type="number"] {
     box-sizing: border-box;
     max-width: inherit;
     background-color: white;
+    border-top: 4px #3c8dbc solid;
 }
 
 
@@ -240,6 +243,7 @@ input[type="number"] {
     font-size: 50px;
     background-color: white;
     animation: gpa-in 0.5s ease-in;
+    border-top: 2px #d6dff0 dashed;
 }
 
 @keyframes gpa-in {
@@ -269,7 +273,7 @@ input[type="number"] {
     height: 0;
     line-height: 0;
     text-align: end;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     background: none;
     border: none;
     outline: none;
@@ -288,6 +292,7 @@ input[type="number"] {
     font-size: larger;
     line-height: 15px;
     text-align: center;
+    margin-top: 5px;
 }
 
 .delBtn button:hover {
