@@ -77,18 +77,6 @@ input[type="number"] {
     background-color: white;
 }
 
-.sub-con button {
-    width: 200%;
-    box-sizing: border-box;
-    padding: 0 10px;
-    background: none;
-    border: none;
-    outline: none;
-}
-
-.sub-con button:hover {
-    background: #eee;
-}
 
 .row {
     display: table-row;
@@ -219,4 +207,33 @@ input[type="number"] {
     background-color: #000000;
     color: white;
     width: 120px;
+}
+
+.delBtn {
+    position: relative;
+    height: 0;
+    line-height: 0;
+    text-align: end;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.delBtn button {
+    transform: translateY(50%);
+    background: #eee;
+    border: none;
+    outline: none;
+    height: 15px;
+    width: 15px;
+    box-sizing: border-box;
+    padding: 0;
+    font-size: larger;
+    line-height: 15px;
+    text-align: center;
+}
+
+.delBtn button:hover {
+    background: #dd4b39;
 }

@@ -51,37 +51,41 @@ class SubjectItem extends React.Component {
         const Score = this.props.data.Score
         const Grade = this.props.data.Grade
         return (
-            <div className="sub-con">
-                <div className="row">
-                    <div className="cell">
-                        <input className="subInp" placeholder={'科目' + (this.props.index + 1)} type="text" maxLength='50'
-                               value={subName} onChange={this.subNameChanged}/>
-                    </div>
-                    <div className="cell">
-                        <input className="grade" placeholder='绩点' readOnly
-                               value={Grade != null ? ("单科绩点:"+Grade.toFixed(2)) : ""}/>
-                    </div>
+            <div>
+                <div className="delBtn">
+                    <button onClick={this.itemRemove}>-</button>
                 </div>
-                <div className="row">
-                    <div className="creditInp">
-                        <input placeholder='输入学分' type="number" min='0' max='100' value={Credit}
-                               onChange={this.creditChanged}/>
-                        <div className="inpTip">/学分</div>
-                    </div>
+                <div className="sub-con">
 
-                    <div className="scoreInp">
-                        <input placeholder='输入分数' type="number" min='0' max='100' value={Score}
-                               onChange={this.scoreChanged}/>
-                        <div className="inpTip">/分</div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="cell">
-                        <button onClick={this.itemRemove}>x</button>
-                    </div>
-                </div>
 
-            </div>);
+                    <div className="row">
+                        <div className="cell">
+                            <input className="subInp" placeholder={'科目' + (this.props.index + 1)} type="text"
+                                   maxLength='50'
+                                   value={subName} onChange={this.subNameChanged}/>
+                        </div>
+                        <div className="cell">
+                            <input className="grade" placeholder='绩点' readOnly
+                                   value={Grade != null ? ("单科绩点:" + Grade.toFixed(2)) : ""}/>
+                        </div>
+
+                    </div>
+                    <div className="row">
+                        <div className="creditInp">
+                            <input placeholder='输入学分' type="number" min='0' max='100' value={Credit}
+                                   onChange={this.creditChanged}/>
+                            <div className="inpTip">/学分</div>
+                        </div>
+
+                        <div className="scoreInp">
+                            <input placeholder='输入分数' type="number" min='0' max='100' value={Score}
+                                   onChange={this.scoreChanged}/>
+                            <div className="inpTip">/分</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
     }
 }
 
