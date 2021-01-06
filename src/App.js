@@ -187,7 +187,7 @@ class App extends React.Component {
                     <h2>供沈航师生使用</h2>
                     <p>
                         <a href="https://github.com/BladeHiker">
-                            <img className="about" src="https://img.shields.io/badge/BladeHiker-v1.0-blue.svg?style=flat&logo=github"/>
+                            <img className="about" alt="version" src="https://img.shields.io/badge/BladeHiker-v1.0-blue.svg?style=flat&logo=github"/>
                         </a>
                     </p>
 
