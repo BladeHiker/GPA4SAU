@@ -69,13 +69,13 @@ class SubjectItem extends React.Component {
                     </div>
                     <div className="row">
                         <div className="creditInp">
-                            <input placeholder='输入学分' type="number" step="0.01" min='0' value={Credit}
+                            <input placeholder='输入学分' type="number" step="0.1" min='0' value={Credit}
                                    onChange={this.creditChanged}/>
                             <div className="inpTip">/学分</div>
                         </div>
 
                         <div className="scoreInp">
-                            <input placeholder='输入分数' type="number" step="0.01" min='0' value={Score}
+                            <input placeholder='输入分数' type="number" step="0.1" min='0' value={Score}
                                    onChange={this.scoreChanged}/>
                             <div className="inpTip">/分</div>
                         </div>
@@ -175,7 +175,7 @@ class App extends React.Component {
             sumCredit += this.state.subList[i].Credit
             sumGrade += this.state.subList[i].Grade * this.state.subList[i].Credit
         }
-        return !isNaN(sumGrade / sumCredit) ? (sumGrade / sumCredit).toFixed(2) : null
+        return isFinite(sumGrade / sumCredit) ? (sumGrade / sumCredit).toFixed(2) : null
     }
 
     render() {
@@ -187,7 +187,8 @@ class App extends React.Component {
                     <h2>供沈航师生使用</h2>
                     <p>
                         <a href="https://github.com/BladeHiker">
-                            <img className="about" alt="version" src="https://img.shields.io/badge/BladeHiker-v1.0-blue.svg?style=flat&logo=github"/>
+                            <img className="about" alt="version"
+                                 src="https://img.shields.io/badge/BladeHiker-v1.0-blue.svg?style=flat&logo=github"/>
                         </a>
                     </p>
 
