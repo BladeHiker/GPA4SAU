@@ -1,7 +1,6 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 import React from 'react';
-
 
 class SubjectItem extends React.Component {
     constructor(props) {
@@ -186,7 +185,11 @@ class App extends React.Component {
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1>SAU绩点计算器</h1>
                     <h2>供沈航师生使用</h2>
-                    <p>V1.0 @BladeHiker</p>
+                    <p>
+                        <a href="https://github.com/BladeHiker">
+                            <img className="about" src="https://img.shields.io/badge/BladeHiker-v1.0-blue.svg?style=flat&logo=github"/>
+                        </a>
+                    </p>
 
                 </header>
                 <div className="main-con">
