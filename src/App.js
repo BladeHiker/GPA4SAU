@@ -196,7 +196,11 @@ class App extends React.Component {
                 <div className="main-con">
                     <ol>
                         <li>
-                            <p className="container tips">Tips:评级类学科分数填写方法 <hr/>优秀 = 95，良好 = 85，中等 = 75，及格 = 65，不及格 = 0
+                            <p className="container tips">Tips:评级类学科分数填写方法 <hr/>优秀 = 95，良好 = 85，中等 = 75，及格 = 65，不及格 = 0<br/>通过、不通过、取消的科目不参与计算
+                            </p>
+                        </li>
+                        <li>
+                            <p className="container tips-red">Tips:补考及缓考科目 <hr/>补考看最近一次补考成绩，若超过60分按60分填写<br/>缓考成绩正常填写
                             </p>
                         </li>
                         {this.getList()}
