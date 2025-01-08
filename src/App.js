@@ -70,13 +70,13 @@ class SubjectItem extends React.Component {
                     <div className="row">
                         <div className="creditInp">
                             <input placeholder='输入学分' type="number" step="0.1" min='0' value={Credit}
-                                   onChange={this.creditChanged}/>
+                                   onChange={this.creditChanged} onWheel={() => document.activeElement.blur()}/>
                             <div className="inpTip">/学分</div>
                         </div>
 
                         <div className="scoreInp">
                             <input placeholder='输入分数' type="number" step="0.1" min='0' value={Score}
-                                   onChange={this.scoreChanged}/>
+                                   onChange={this.scoreChanged} onWheel={() => document.activeElement.blur()}/>
                             <div className="inpTip">/分</div>
                         </div>
                     </div>
